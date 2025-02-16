@@ -4,12 +4,12 @@ const UserSchema = Schema({
     name: {
         type: String,
         required: [true, 'Name is required'],
-        maxLength: [25, 'Can´t be overcome 25 cheracters']
+        maxLength: [25, 'Cant be overcome 25 cheracters']
     },
     surname: {
         type: String,
         required: [true, 'Surname is required'],
-        maxLength: [25, 'Can"t be overcome 25 characters '],
+        maxLength: [25, 'Cant be overcome 25 characters '],
         unique: true
     },
     username: {
@@ -40,9 +40,10 @@ const UserSchema = Schema({
         type: Boolean,
         default: true
     },
-    courses:[{
+    keeper:[{
         type: Schema.Types.ObjectId,
         ref: 'course',
+        required: false
     }]
 },
     {
@@ -56,4 +57,4 @@ UserSchema.methods.toJSON = function () {
     return usuario;
 }
 
-export default model('User', UserSchema);
+export default model('user', UserSchema);

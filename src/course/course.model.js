@@ -1,22 +1,27 @@
 import { Schema, model } from "mongoose";
 
 const CourseSchema = Schema({
-    name:{
+    nameC: {
         type: String,
         required: [true, 'Name is required'],
     },
-    description:{
+    description: {
         type: String,
         required: [true, 'Description is required']
     },
-    level:{
+    level: {
         type: String,
         required: [true, 'The level is required']
     },
-    status:{
+    status: {
         type: Boolean,
         default: true
-    }
+    },
+    keeper: [{
+        type: Schema.Types.ObjectId,
+        ref: 'user',
+        required: true
+    }]
 },
     {
         timestamps: true,
@@ -24,4 +29,4 @@ const CourseSchema = Schema({
     }
 );
 
-export default model('Course', CourseSchema);
+export default model('course', CourseSchema);
