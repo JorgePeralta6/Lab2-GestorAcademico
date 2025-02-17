@@ -46,15 +46,100 @@
 			"name": "GetCurso",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"course"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "DeleteCurso",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IxOThiOWFkZDQ2YjAzYWZiY2I3MWIiLCJpYXQiOjE3Mzk4MTE2OTAsImV4cCI6MTczOTgxNTI5MH0.tCdpy__6QK2Qlns3h8QKCn4_0GKaT7JBFRt2j_0tJs4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/course/67b36952eb13374bc830efa3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"course",
+						"67b36952eb13374bc830efa3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCurso",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IxOThiOWFkZDQ2YjAzYWZiY2I3MWIiLCJpYXQiOjE3Mzk4MTE5MjgsImV4cCI6MTczOTgxNTUyOH0.KWEBwwaFCnIp2LXbIhsq-CUpCdKT3D0GGGyxndzdidQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameC\": \"Poqoman\",\r\n    \"description\": \"Clase de poqoman\",\r\n    \"level\": \"Poqoman 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/course/67b28acdc7ddb7ba7fcda8ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"course",
+						"67b28acdc7ddb7ba7fcda8ec"
+					]
+				}
 			},
 			"response": []
 		}

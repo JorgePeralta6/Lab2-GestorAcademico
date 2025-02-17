@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Cristian\",\r\n    \"surname\": \"Luna\",\r\n    \"username\": \"cluna\",\r\n    \"email\": \"cluna@kinal.edu.gt\",\r\n    \"password\": \"12345678\",\r\n    \"phone\": \"09938899\",\r\n    \"role\": \"ALUMNO_ROLE\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Elkyn\",\r\n    \"surname\": \"Samayoa\",\r\n    \"username\": \"esamas\",\r\n    \"email\": \"esamas@kinal.edu.gt\",\r\n    \"password\": \"12345678\",\r\n    \"phone\": \"33221100\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/gestorAcademico/v1/auth/register",
+					"raw": "http://localhost:3000/gestorAcademico/v1/auth/registerAlumos",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -31,7 +31,7 @@
 						"gestorAcademico",
 						"v1",
 						"auth",
-						"register"
+						"registerAlumos"
 					]
 				}
 			},
@@ -65,7 +65,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"hmartinez@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"raw": "{\r\n    \"email\": \"drojas@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -96,7 +96,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nameC\": \"Sociales\"\r\n}",
+					"raw": "{\r\n    \"nameC\": \"Poqoman\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -104,7 +104,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/gestorAcademico/v1/users/agregarCurso/67b198b9add46b03afbcb71b",
+					"raw": "http://localhost:3000/gestorAcademico/v1/users/agregarCurso/67b3685205281a28d9f8c9c0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -115,7 +115,7 @@
 						"v1",
 						"users",
 						"agregarCurso",
-						"67b198b9add46b03afbcb71b"
+						"67b3685205281a28d9f8c9c0"
 					]
 				}
 			},
@@ -128,7 +128,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Henry\",\r\n    \"surname\": \"Martínez\",\r\n    \"username\": \"hmartinez\",\r\n    \"email\": \"hmartinez@gmail.com\",\r\n    \"phone\": \"00001111\",\r\n    \"role\": \"TEACHER_ROLE\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Daniel\",\r\n    \"surname\": \"Rojas\",\r\n    \"username\": \"drojas\",\r\n    \"email\": \"drojas@gmail.com\",\r\n    \"phone\": \"00003333\",\r\n    \"role\": \"TEACHER_ROLE\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -136,7 +136,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/gestorAcademico/v1/users/67b1913c4054545fb1879bd6",
+					"raw": "http://localhost:3000/gestorAcademico/v1/users/67b198b9add46b03afbcb71b",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -146,17 +146,40 @@
 						"gestorAcademico",
 						"v1",
 						"users",
-						"67b1913c4054545fb1879bd6"
+						"67b198b9add46b03afbcb71b"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "AgregarTeacher",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rene\",\r\n    \"surname\": \"Rosas\",\r\n    \"username\": \"crosas\",\r\n    \"email\": \"crosas@kinal.edu.gt\",\r\n    \"password\": \"12345678\",\r\n    \"phone\": \"22209991\",\r\n    \"role\": \"TEACHER_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/auth/registerProfes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"auth",
+						"registerProfes"
+					]
+				}
 			},
 			"response": []
 		}
