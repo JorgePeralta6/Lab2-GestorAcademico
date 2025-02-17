@@ -119,7 +119,7 @@ export const deleteUser = async (req, res) => {
 
         res.status(200).json({
             succes: true,
-            msg: 'Usuario desactivado',
+            msg: 'Usuario eliminado',
             user,
             autheticatedUser
         })
@@ -127,7 +127,7 @@ export const deleteUser = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             succes: false,
-            msg: 'Error al desactivar usuario',
+            msg: 'Error al eliminar usuario',
             error
         })
     }
