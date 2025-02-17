@@ -148,12 +148,21 @@ export const asignarCourse = async (req, res) => {
         }
 
         const updatedUser = await User.findByIdAndUpdate(id).populate({ path: 'keeper', match: { status: true }, select: 'nameC description level' });
-
+        
         if (updatedUser.keeper.length >= 3) {
             return res.status(400).json({
                 success: false,
                 message: 'El usuario ya tiene el máximo de 3 cursos asignados'
             });
+        }
+
+        const courseExists = updatedUser.keeper.some(item => item.nameC === course.nameC);
+
+        if (courseExists) {
+            return res.status(404).json({
+                success: false,
+                msg: 'Ya se encuentra asignado a este curso'
+            })
         }
 
         updatedUser.keeper.push([course._id]);
