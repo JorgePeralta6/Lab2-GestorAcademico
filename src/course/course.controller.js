@@ -47,10 +47,10 @@ export const getCourses = async (req, res) =>{
             .limit(Number(limite));
 
         const coursesWithOwnerNames = await Promise.all(courses.map(async (course) =>{
-            const owner = await User.findById(courses.keeper);
+            const owner = await User.findById(course.keeper);
             return {
                 ...course.toObject(),
-                keeper: owner ? owner.nombre : "Propietario no encontrado"
+                keeper: owner ? owner.name : "Propietario no encontrado"
             }
         }));
 

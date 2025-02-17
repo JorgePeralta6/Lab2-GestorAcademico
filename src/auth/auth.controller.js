@@ -1,37 +1,37 @@
 import Usuario from '../users/user.model.js';
 import { hash, verify } from 'argon2';
-import { generarJWT} from '../helpers/generate-jwt.js';
+import { generarJWT } from '../helpers/generate-jwt.js';
 
 export const login = async (req, res) => {
 
     const { email, password, username } = req.body;
 
     try {
-        
+
         const user = await Usuario.findOne({
-            $or: [{email}, {username}]
+            $or: [{ email }, { username }]
         });
 
-        if(!user){
+        if (!user) {
             return res.status(400).json({
                 msg: 'Credenciales incorrectas, Correo no existe en la base de datos'
             });
         }
 
-        if(!user.estado){
+        if (!user.estado) {
             return res.status(400).json({
                 msg: 'El usuario no existe en la base de datos'
             });
         }
 
         const validPassword = await verify(user.password, password);
-        if(!validPassword){
+        if (!validPassword) {
             return res.status(400).json({
                 msg: 'La contraseña es incorrecta'
             });
         }
 
-        const token = await generarJWT( user.id );
+        const token = await generarJWT(user.id);
 
         return res.status(200).json({
             msg: 'Inicio de sesión exitoso!!',
@@ -43,7 +43,7 @@ export const login = async (req, res) => {
         })
 
     } catch (e) {
-        
+
         console.log(e);
 
         return res.status(500).json({
@@ -53,13 +53,11 @@ export const login = async (req, res) => {
     }
 }
 
-export const register = async (req, res) => {
+export const registerProfesor = async (req, res) => {
     try {
         const data = req.body;
 
-        let profilePicture = req.file ? req.file.filename : null;
-
-        const encryptedPassword = await hash (data.password);
+        const encryptedPassword = await hash(data.password);
 
         const user = await Usuario.create({
             name: data.name,
@@ -68,25 +66,54 @@ export const register = async (req, res) => {
             email: data.email,
             phone: data.phone,
             password: encryptedPassword,
-            role: data.role,
-            profilePicture
+            role: data.role
         })
 
         return res.status(201).json({
-            message: "User registered successfully",
+            message: "Usuario registrado con exito",
             userDetails: {
                 user: user.email
             }
-        });
-
-    } catch (error) {
-        
-        console.log(error);
-
-        return res.status(500).json({
-            message: "User registration failed",
-            error: err.message
         })
 
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            message: "El usuario no se pudo registrar",
+            error: error.message
+        })
+    }
+}
+
+export const registerAlumno = async (req, res) => {
+    try {
+
+        const data = req.body;
+
+        const encryptedPassword = await hash(data.password);
+
+        const user = await Usuario.create({
+            name: data.name,
+            surname: data.surname,
+            username: data.username,
+            email: data.email,
+            phone: data.phone,
+            password: encryptedPassword,
+            role: data.role
+        })
+
+        return res.status(201).json({
+            message: "Usuario registrado con exito",
+            userDetails: {
+                user: user.email
+            }
+        })
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            message: "El usuario no se pudo registrar",
+            error: error.message
+        })
     }
 }

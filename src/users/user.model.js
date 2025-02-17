@@ -34,7 +34,7 @@ const UserSchema = Schema({
     role: {
         type: String,
         required: true,
-        enum: ['TEACHER_ROLE','ALUMNO_ROLE'],
+        enum: ['ALUMNO_ROLE','TEACHER_ROLE'],
         default: "ALUMNO_ROLE"
     },
     estado: {
