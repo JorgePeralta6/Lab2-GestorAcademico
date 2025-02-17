@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "67b1940677f971b05b4a763a"
+  },
+  "name": "Taller",
+  "description": "Clase de informatica",
+  "level": "Taller 3",
+  "status": false,
+  "keeper": [
+    {
+      "$oid": "67b1935877f971b05b4a7635"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-16T07:30:14.863Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T04:36:21.637Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b19c15ea3fc9f313ca01f0"
+  },
+  "nameC": "Sociales",
+  "description": "Clase de historia",
+  "level": "Sociales 2",
+  "status": true,
+  "keeper": [
+    {
+      "$oid": "67b1935877f971b05b4a7635"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-16T08:04:37.543Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-16T08:04:37.543Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b28acdc7ddb7ba7fcda8ec"
+  },
+  "nameC": "Ingles",
+  "description": "Clase de ingles",
+  "level": "Ingles 3",
+  "status": true,
+  "keeper": [
+    {
+      "$oid": "67b198b9add46b03afbcb71b"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-17T01:03:09.862Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T01:03:09.862Z"
+  }
+}]

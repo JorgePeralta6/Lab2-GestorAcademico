@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "23cca5c7-7300-4b8b-8ab8-90efe4b49525",
+		"name": "UserGestion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37413959"
+	},
+	"item": [
+		{
+			"name": "AgregarUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cristian\",\r\n    \"surname\": \"Luna\",\r\n    \"username\": \"cluna\",\r\n    \"email\": \"cluna@kinal.edu.gt\",\r\n    \"password\": \"12345678\",\r\n    \"phone\": \"09938899\",\r\n    \"role\": \"ALUMNO_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hmartinez@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AsignarCurso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameC\": \"Sociales\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/users/agregarCurso/67b198b9add46b03afbcb71b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"users",
+						"agregarCurso",
+						"67b198b9add46b03afbcb71b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Henry\",\r\n    \"surname\": \"Martínez\",\r\n    \"username\": \"hmartinez\",\r\n    \"email\": \"hmartinez@gmail.com\",\r\n    \"phone\": \"00001111\",\r\n    \"role\": \"TEACHER_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/gestorAcademico/v1/users/67b1913c4054545fb1879bd6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"users",
+						"67b1913c4054545fb1879bd6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

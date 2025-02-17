@@ -1,0 +1,128 @@
+[{
+  "_id": {
+    "$oid": "67b1913c4054545fb1879bd6"
+  },
+  "name": "Fran",
+  "surname": "Perez",
+  "username": "fperez",
+  "email": "jperalta-2023478@kinal.edu.gt",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$4co+fBBEnbrAdKkIvue0BA$zi9Mb9ZqgGZkE8HqNSMSUBo+Kkxt0qW98VrmsIOxbw4",
+  "phone": "23318899",
+  "role": "TEACHER_ROLE",
+  "estado": true,
+  "courses": [],
+  "createdAt": {
+    "$date": "2025-02-16T07:18:20.303Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T00:07:25.464Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b1935877f971b05b4a7635"
+  },
+  "name": "Jose",
+  "surname": "Cortes",
+  "username": "jcortes",
+  "email": "jcortes@kinal.edu.gt",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$rBXMN+E5WeLJPhCOlkFecg$jAF2CShXeeZwHGEEaxt9nrg4DodWhX9Re+fFftwZNl8",
+  "phone": "03323445",
+  "role": "TEACHER_ROLE",
+  "estado": true,
+  "courses": [],
+  "createdAt": {
+    "$date": "2025-02-16T07:27:20.415Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-16T07:27:20.415Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b198b9add46b03afbcb71b"
+  },
+  "name": "Daniel",
+  "surname": "Rojas",
+  "username": "drojas",
+  "email": "drojas@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$DemdI3DHBgS9x2zblTfB4Q$kkyKll6uPbaJf7Ettd0UUlrWzoE10zHx9812HPYlOYI",
+  "phone": "00003333",
+  "role": "TEACHER_ROLE",
+  "estado": true,
+  "courses": [],
+  "createdAt": {
+    "$date": "2025-02-16T07:50:17.922Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T01:02:32.468Z"
+  },
+  "keeper": [
+    {
+      "$oid": "67b19c15ea3fc9f313ca01f0"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67b28af7c7ddb7ba7fcda8f0"
+  },
+  "name": "Cristian",
+  "surname": "Luna",
+  "username": "cluna",
+  "email": "cluna@kinal.edu.gt",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$RqXeVEeiREBshj3JlipxVQ$l4+XcEQrNTpsNFyDKLnX3NzBlL2iYSMpP8LJcrwwoCM",
+  "phone": "09938899",
+  "role": "ALUMNO_ROLE",
+  "estado": true,
+  "keeper": [
+    {
+      "$oid": "67b28acdc7ddb7ba7fcda8ec"
+    },
+    {
+      "$oid": "67b28acdc7ddb7ba7fcda8ec"
+    },
+    {
+      "$oid": "67b28acdc7ddb7ba7fcda8ec"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-17T01:03:51.108Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T01:12:43.364Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b291d95524e0f906a4c39f"
+  },
+  "name": "Juan",
+  "surname": "Rodolfo",
+  "username": "jrodolfo",
+  "email": "jrodolfo@kinal.edu.gt",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$c1tsXIVAuQXGTQqeNjaczw$O0aqd2clIN0gMKnPvu7A90nV+Cc7LR2+TjUEpLJaIMA",
+  "phone": "00000003",
+  "role": "ALUMNO_ROLE",
+  "estado": true,
+  "keeper": [
+    {
+      "$oid": "67b28acdc7ddb7ba7fcda8ec"
+    },
+    {
+      "$oid": "67b28acdc7ddb7ba7fcda8ec"
+    },
+    {
+      "$oid": "67b28acdc7ddb7ba7fcda8ec"
+    },
+    {
+      "$oid": "67b19c15ea3fc9f313ca01f0"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-17T01:33:13.336Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T01:59:18.272Z"
+  }
+}]
