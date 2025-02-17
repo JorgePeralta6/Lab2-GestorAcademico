@@ -50,7 +50,7 @@ export const getCourses = async (req, res) =>{
             const owner = await User.findById(course.keeper);
             return {
                 ...course.toObject(),
-                keeper: owner ? owner.name : "Propietario no encontrado"
+                keeper: owner ? owner.name : "Maestro no encontrado"
             }
         }));
 
